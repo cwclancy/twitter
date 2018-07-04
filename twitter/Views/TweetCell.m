@@ -43,6 +43,8 @@
     self.retweetLabel.text = [NSString stringWithFormat:@"%d", tweet.retweetCount];
     self.favoriteLabel.text = [NSString stringWithFormat:@"%d", tweet.favoriteCount];
     [self.profilePicture setImageWithURL:tweet.user.profilePictureURL];
+    [self.textLabel sizeToFit];
+    self.timeLabel.text = self.tweet.createdAtString;
 }
 
 /*

@@ -15,6 +15,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "DateTools.h"
 
 @interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -41,6 +42,7 @@
     
     // timeline set up
     [self fetchTweets];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
 
 }

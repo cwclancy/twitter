@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 @property (strong, nonatomic) IBOutlet UILabel *retweetLabel;
 @property (strong, nonatomic) IBOutlet UILabel *favoriteLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 
 @end
