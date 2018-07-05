@@ -52,12 +52,11 @@
 */
 
 -(void)refreshPage {
-    self.username.text = self.tweet.user.screenName;
+    self.username.text = [NSString stringWithFormat:@"@%@",self.tweet.user.screenName];
     self.screenName.text = self.tweet.user.name;
     self.tweetContents.text = self.tweet.text;
     self.retweetLabel.text = [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
     self.favoriteLabel.text = [NSString stringWithFormat:@"%d", self.tweet.favoriteCount];
-    [self.profilePicture setImageWithURL:self.tweet.user.profilePictureURL];
 }
 
 

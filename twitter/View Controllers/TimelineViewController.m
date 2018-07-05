@@ -16,6 +16,7 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "DateTools.h"
+#import "DetailsViewContoller.h"
 
 @interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -23,6 +24,8 @@
 @property (strong, nonatomic) NSMutableArray *tweets;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *composeTweetButton;
+
 
 @end
 
@@ -77,13 +80,6 @@
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UINavigationController *navigationController = [segue destinationViewController];
-    ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
-    composeController.delegate = self;
-}
-
-
 
 /************************
  
@@ -127,6 +123,30 @@
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     appDelegate.window.rootViewController = loginViewController;
     [[APIManager shared] logout];
+}
+
+
+/************************
+ 
+ SEGUE
+ 
+ *************************/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // for composing tweets
+    if (sender == self.composeTweetButton) {
+        UINavigationController *navigationController = [segue destinationViewController];
+        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+        composeController.delegate = self;
+    }
+    // for going to details view
+    else {
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath =[self.tableView indexPathForCell:tappedCell];
+        Tweet *tweet = self.tweets[indexPath.row];
+        DetailsViewContoller *detailsViewController = [segue destinationViewController];
+        detailsViewController.tweet = tweet;
+    }
 }
 
 

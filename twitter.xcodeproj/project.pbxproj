@@ -21,6 +21,7 @@
 		CEF2A24E20EACB1800FF8000 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A24D20EACB1800FF8000 /* Tweet.m */; };
 		CEF2A25120EAD29C00FF8000 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A25020EAD29C00FF8000 /* TweetCell.m */; };
 		CEF2A25420EBF42E00FF8000 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A25320EBF42E00FF8000 /* ComposeViewController.m */; };
+		CEF2A25720EE89AC00FF8000 /* DetailsViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A25620EE89AC00FF8000 /* DetailsViewContoller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		CEF2A25020EAD29C00FF8000 /* TweetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 		CEF2A25220EBF42E00FF8000 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		CEF2A25320EBF42E00FF8000 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		CEF2A25520EE89AC00FF8000 /* DetailsViewContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewContoller.h; sourceTree = "<group>"; };
+		CEF2A25620EE89AC00FF8000 /* DetailsViewContoller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewContoller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				6AD2790820BCC04D0085BC29 /* TimelineViewController.m */,
 				CEF2A25220EBF42E00FF8000 /* ComposeViewController.h */,
 				CEF2A25320EBF42E00FF8000 /* ComposeViewController.m */,
+				CEF2A25520EE89AC00FF8000 /* DetailsViewContoller.h */,
+				CEF2A25620EE89AC00FF8000 /* DetailsViewContoller.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				CEF2A25420EBF42E00FF8000 /* ComposeViewController.m in Sources */,
 				6AD278E820BC4B970085BC29 /* main.m in Sources */,
 				CEF2A24E20EACB1800FF8000 /* Tweet.m in Sources */,
+				CEF2A25720EE89AC00FF8000 /* DetailsViewContoller.m in Sources */,
 				6AD2790620BCC0380085BC29 /* LoginViewController.m in Sources */,
 				6AD278DA20BC4B950085BC29 /* AppDelegate.m in Sources */,
 				6AD278F620BCB68B0085BC29 /* APIManager.m in Sources */,
