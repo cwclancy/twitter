@@ -51,6 +51,14 @@
         formatter.timeStyle = NSDateFormatterNoStyle;
         // Convert Date to String
         self.createdAtString = [NSDate shortTimeAgoSinceDate:date];
+        
+        self.entities = dictionary[@"entities"];
+        
+        if (self.entities[@"media"]) {
+            self.mediaArray = self.entities[@"media"];
+            NSDictionary *mediaDict = self.mediaArray[0];
+            self.mediaURL = [NSURL URLWithString:mediaDict[@"media_url_https"]];
+        }
 
     }
     return self;
