@@ -99,8 +99,6 @@ static NSString * const consumerSecret = @"NHdT33BplIEw6fGh3sFIuP65E12HQ3CyI4aKT
 
 - (void)retweet:(Tweet *)tweet completion:(void (^)(Tweet *, NSError *))completion{
     NSString *urlString = [NSString stringWithFormat:@"1.1/statuses/retweet/%@.json", tweet.idStr];
-    NSLog(@"THIS IS MY URL STRING");
-    NSLog(urlString);
     NSDictionary *parameters = @{@"id": tweet.idStr};
     [self POST:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable tweetDictionary) {
         Tweet *tweet = [[Tweet alloc] initWithDictionary:tweetDictionary];
@@ -120,6 +118,19 @@ static NSString * const consumerSecret = @"NHdT33BplIEw6fGh3sFIuP65E12HQ3CyI4aKT
         completion(nil, error);
     }];
 }
+
+- (void)getUser:(NSString *)user completion:(void (^)(User *, NSError *))completion{
+    NSString *urlString = @"https://api.twitter.com/1.1/users/show.json";
+    NSDictionary *parameters = @{@"screen_name": @"ConnorWClancy"};
+    [self POST:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable userDictionary) {
+        User *result = [[User alloc] initWithDictionary:userDictionary];
+        completion(result, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+}
+
+
 
 
 @end

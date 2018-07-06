@@ -17,8 +17,9 @@
 #import "LoginViewController.h"
 #import "DateTools.h"
 #import "DetailsViewContoller.h"
+#import "TimelineProfileViewController.h"
 
-@interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface TimelineViewController () <ComposeViewControllerDelegate, TweetCellDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tweets;
@@ -91,6 +92,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     cell.tweet = self.tweets[indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
@@ -109,6 +111,12 @@
     [self.tweets insertObject:tweet atIndex:0];
     [self.tableView reloadData];
     NSLog(@"here");
+}
+
+
+- (void)tweetCell:(TweetCell *)tweetCell didTap:(User *)user {
+    [self performSegueWithIdentifier:@"profileSegue" sender:user];
+
 }
 
 /************************
@@ -138,6 +146,9 @@
         UINavigationController *navigationController = [segue destinationViewController];
         ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
         composeController.delegate = self;
+    } else if ([sender isKindOfClass:[User class]]) {
+        TimelineProfileViewController *newView = [segue destinationViewController];
+        newView.user = sender;
     }
     // for going to details view
     else {
@@ -148,6 +159,9 @@
         detailsViewController.tweet = tweet;
     }
 }
+
+
+
 
 
 @end

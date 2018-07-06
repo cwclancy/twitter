@@ -12,7 +12,7 @@
 
 
 @interface TweetCell ()
-
+@property (strong, nonatomic)  UITapGestureRecognizer *profileTapGestureRecognizer;
 @end
 
 @implementation TweetCell
@@ -24,6 +24,9 @@
     // Initialization code
     self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width / 2;
     self.profilePicture.clipsToBounds = YES;
+    self.profileTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapUserProfile:)];
+    [self.profilePicture addGestureRecognizer:self.profileTapGestureRecognizer];
+    [self.profilePicture setUserInteractionEnabled:YES];
     
 }
 
@@ -126,6 +129,16 @@
         [self.retweetButton setSelected:NO];
     }
 }
+
+/*
+    PROFILE IMAGE VIEW
+*/
+
+- (void) didTapUserProfile:(UITapGestureRecognizer *)sender{
+    [self.delegate tweetCell:self didTap:self.tweet.user];
+}
+
+
 
 
 

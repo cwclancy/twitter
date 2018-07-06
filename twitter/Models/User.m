@@ -17,6 +17,12 @@
         self.screenName = dict[@"screen_name"];
         self.userID = dict[@"user_id"];
         self.profilePictureURL = [NSURL URLWithString:dict[@"profile_image_url_https"]];
+
+        self.backgroundPictureURL = [NSURL URLWithString:dict[@"profile_banner_url"]];
+    
+        self.followers = [NSString stringWithFormat:@"%@", dict[@"followers_count"]];
+        self.following = [NSString stringWithFormat:@"%@", dict[@"friends_count"]];
+        self.bio = dict[@"description"];
     }
     return self;
 }
