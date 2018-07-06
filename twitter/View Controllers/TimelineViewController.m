@@ -19,13 +19,16 @@
 #import "DetailsViewContoller.h"
 #import "TimelineProfileViewController.h"
 
-@interface TimelineViewController () <ComposeViewControllerDelegate, TweetCellDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface TimelineViewController () <ComposeViewControllerDelegate, TweetCellDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tweets;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *composeTweetButton;
+@property (strong, nonatomic) NSNumber *numberOfTweets;
+
+@property (assign, nonatomic) BOOL isMoreDataLoading;
 
 
 @end
@@ -160,6 +163,37 @@
     }
 }
 
+/************************
+ 
+ INFINITE SCROLL
+ 
+ *************************/
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if(!self.isMoreDataLoading){
+        // Calculate the position of one screen length before the bottom of the results
+        int scrollViewContentHeight = self.tableView.contentSize.height;
+        int scrollOffsetThreshold = scrollViewContentHeight - self.tableView.bounds.size.height;
+        
+        // When the user has scrolled past the threshold, start requesting
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.tableView.isDragging) {
+            self.isMoreDataLoading = true;
+            self.numberOfTweets = [NSNumber numberWithInt:200];
+            [self loadMoreData];
+        }
+    }
+}
+
+- (void)loadMoreData {
+    [[APIManager shared] getNumberOfTimelineTweetsWithNumber:self.numberOfTweets completion:^(NSArray *tweets, NSError *error) {
+        if (tweets) {
+            self.tweets = [NSMutableArray arrayWithArray:tweets];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
 
 
 

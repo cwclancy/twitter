@@ -61,6 +61,18 @@ static NSString * const consumerSecret = @"NHdT33BplIEw6fGh3sFIuP65E12HQ3CyI4aKT
    }];
 }
 
+- (void)getNumberOfTimelineTweetsWithNumber:(NSNumber *)number completion:(void (^)(NSArray *tweets, NSError *error))completion{
+    
+    NSString *urlString = @"1.1/statuses/home_timeline.json";
+    NSDictionary *parameters = @{@"count": number};
+    [self GET:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *  _Nullable tweetDictionaries) {
+        NSMutableArray *tweets = [Tweet tweetsWithArray:tweetDictionaries];
+        completion(tweets, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+}
+
 - (void)postStatusWithString:(NSString *)text completion:(void (^)(Tweet *, NSError *))completion {
     NSString *urlString = @"1.1/statuses/update.json";
     NSDictionary *parameters = @{@"status": text};
