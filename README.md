@@ -11,7 +11,7 @@ https://paper.dropbox.com/doc/Twitter--ADuVCVvwop_njSNAbUU96Q2VAQ-g255BPX3K4X7G0
 
 **Fwitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -63,27 +63,41 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
+<div>
 *Launch Screen*
 <img src='tGIFS/launch.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
+<div>
 *Infinte Scroll*
 <img src='tGIFS/infinite.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
+<div>
 *Compose Tweet*
 <img src='tGIFS/compose.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
+<div>
 *Tweet Interations*
 <img src='tGIFS/favorite.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
+<div>
 *Refresh and Rotate*
 <img src='tGIFS/rotate.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
+<div>
 *View Other Profiles*
 <img src='tGIFS/profiles.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
+<div>
 *Logout*
 <img src='tGIFS/logout.gif' title='Start View' width='' alt='Video Walkthrough' />
 <br></br>
+</div>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
