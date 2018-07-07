@@ -7,9 +7,9 @@ The starter project can be found in the `starter-project` tag. Download and run 
 ### Notes
 https://paper.dropbox.com/doc/Twitter--ADuVCVvwop_njSNAbUU96Q2VAQ-g255BPX3K4X7G0reYOWCI
 
-# Project 4 - *Name of App Here*
+# Project 4 - *Flitter*
 
-**Name of your app** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
+**Fwitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
 Time spent: **X** hours spent in total
 
@@ -63,19 +63,19 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-# Launch Screen
+*Launch Screen*
 <img src='tGIFS/launch.gif' title='Start View' width='' alt='Video Walkthrough' />
-# Infinte Scroll
+*Infinte Scroll*
 <img src='tGIFS/infinite.gif' title='Start View' width='' alt='Video Walkthrough' />
-# Compose Tweet
+*Compose Tweet*
 <img src='tGIFS/compose.gif' title='Start View' width='' alt='Video Walkthrough' />
-# Tweet Interations
+*Tweet Interations*
 <img src='tGIFS/favorite.gif' title='Start View' width='' alt='Video Walkthrough' />
-# Rotate
+*Refresh and Rotate*
 <img src='tGIFS/rotate.gif' title='Start View' width='' alt='Video Walkthrough' />
-# View Other Profiles
+*View Other Profiles*
 <img src='tGIFS/profiles.gif' title='Start View' width='' alt='Video Walkthrough' />
-# Logout
+*Logout*
 <img src='tGIFS/logout.gif' title='Start View' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
