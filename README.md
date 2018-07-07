@@ -65,18 +65,25 @@ Here's a walkthrough of implemented user stories:
 
 *Launch Screen*
 <img src='tGIFS/launch.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 *Infinte Scroll*
 <img src='tGIFS/infinite.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 *Compose Tweet*
 <img src='tGIFS/compose.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 *Tweet Interations*
 <img src='tGIFS/favorite.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 *Refresh and Rotate*
 <img src='tGIFS/rotate.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 *View Other Profiles*
 <img src='tGIFS/profiles.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 *Logout*
 <img src='tGIFS/logout.gif' title='Start View' width='' alt='Video Walkthrough' />
+<br></br>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
