@@ -63,19 +63,12 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-Launch Screen
 <img src='tGIFS/launch.gif' title='Start View' width='' alt='Video Walkthrough' />
-Infinte Scroll
 <img src='tGIFS/infinite.gif' title='Start View' width='' alt='Video Walkthrough' />
-Compose Tweet
 <img src='tGIFS/compose.gif' title='Start View' width='' alt='Video Walkthrough' />
-Tweet Interations
 <img src='tGIFS/favorite.gif' title='Start View' width='' alt='Video Walkthrough' />
-Refresh and Rotate
 <img src='tGIFS/rotate.gif' title='Start View' width='' alt='Video Walkthrough' />
-View Other Profiles
 <img src='tGIFS/profiles.gif' title='Start View' width='' alt='Video Walkthrough' />
-Logout
 <img src='tGIFS/logout.gif' title='Start View' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
