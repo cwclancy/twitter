@@ -64,6 +64,12 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <img src='tGIFS/launch.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='tGIFS/infinite.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='tGIFS/compose.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='tGIFS/favorite.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='tGIFS/rotate.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='tGIFS/profiles.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='tGIFS/logout.gif' title='Start View' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
